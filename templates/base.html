@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Expires" content="Wed, 26 Feb 1999 08:21:57 GMT">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Главная</a></li>
+                    <li role="presentation"><a href="/about">О нас</a></li>
+                    <li role="presentation"><a href="/posts">Статьи</a></li>
+                    <li role="presentation"><a href="/create_article">Создать</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Learn flask</h3>
+        </div>
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>
